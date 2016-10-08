@@ -32,11 +32,26 @@
   </div>
    </div>
    <div class="col-md-6">
-  <div class="form-group">
+    <div class="form-group">
+    <%= f.label :gender %><br>
+    <%= f.check_box :gender, class: 'form-control' %>
+    </div>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-6">
+	<div class="form-group">
+    	<%= f.label :picture %><br>
+    	<%= f.text_field :picture, class: 'form-control' %>
+	</div>
+   </div>
+   <div class="col-md-6">
+   <div class="form-group">
     <%= f.label :job %><br>
     <%= f.text_field :job, class: 'form-control' %>
-  </div>
    </div>
+   </div>
+
   </div>
   <div class="row"> 
    <div class="col-md-6">
@@ -46,18 +61,12 @@
   </div>
    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :gender %><br>
-    <%= f.check_box :gender %>
-  </div>
+  
   <div class="form-group">
     <%= f.label :birthdate %><br>
     <%= f.date_select :birthdate %>
   </div>
-  <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
-  </div>
+  
   <div class="actions row">
       <div class="col-md-6 col-md-offset-9">
 	      <%= f.submit 'Save', class: 'btn btn-primary col-md-2' %>
