@@ -32,7 +32,7 @@
   </div>
    </div>
    <div class="col-md-6">
-  <div class="form-goup">
+  <div class="form-group">
     <%= f.label :job %><br>
     <%= f.text_field :job, class: 'form-control' %>
   </div>
@@ -58,7 +58,14 @@
     <%= f.label :picture %><br>
     <%= f.text_field :picture %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions row">
+      <div class="col-md-6 col-md-offset-9">
+	      <%= f.submit 'Save', class: 'btn btn-primary col-md-2' %>
+	      <% if !@person.id.nil? %> 
+	      	<%= link_to  @person , class: 'btn btn-primary col-md-2 col-md-offset-1' do%>     
+	 	      <i class='fa fa-ban'></i> Cancel
+	      	<% end %> 
+	    <% end %>
+      </div>
   </div>
 <% end %>
