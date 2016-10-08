@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- <div class="container-fluid jumbotron">
-<%= yield %>
+ <div class="container jumbotron">	
+    <%= render 'layouts/navigation'  %>
+    <%= yield %>
  </div>
 </body>
 </html>
