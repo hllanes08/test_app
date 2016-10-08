@@ -1,46 +1,34 @@
-<div class="container jumbotron">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @person.email %>
-</p>
-
-<p>
-  <strong>Job:</strong>
-  <%= @person.job %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @person.bio %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @person.gender %>
-</p>
-
-<p>
-  <strong>Birthdate:</strong>
-  <%= @person.birthdate %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= @person.picture %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<div class="container">
+ <div class="jumbotron">
+ <div class="row">
+   <div class="col-md-4">
+	<img src=<%= @person.picture %> />
+   </div>
+   <div class="col-md-4">
+	   <h2><%= @person.first_name %> <%= @person.last_name %> </h2>
+	   <h4><i class="fa fa-briefcase"></i> <%= @person.job %></h4>
+	   <h4><i class="fa fa-envelope-o"></i> <%= @person.email %></h4>
+	   <h4><i class="fa fa-calendar"></i> <%= @person.birthdate%></h4>
+	   <h4><i class="fa fa-male"></i>   <%=@person.gender %></h4>
+   </div>
+  <div class="col-md-4">
+   <p><%= @person.bio %></p>  
+  </div>
+ </div>
+ <div class="row">
+	 <div class="col-md-6 col-md-offset-8">
+		<%= link_to edit_person_path(@person), class: 'btn btn-primary'  do %>
+			<i class="fa fa-pencil"></i> Edit
+		<% end %>
+		&nbsp; 	&nbsp;
+		 <%= link_to @person, method: :delete, data: { confirm: 'Are you sure?'},class: 'btn btn-danger' do %>
+			<i class="fa fa-trash-o"></i> Delete
+		<% end %>
+		&nbsp; 	&nbsp;
+		<%= link_to people_path , class: 'btn btn-primary' do %>
+		   <i class="fa fa-ban"></i> Cancel
+		<% end %>
+	</div>
+ </div>
+ </div>
 </div>

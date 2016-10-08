@@ -1,8 +1,12 @@
-<div class="container jumbotron">
-<h1>Editing Person</h1>
-
+<div class="jumbotron">
+<div class="row">
 <%= render 'form' %>
-
-<%= link_to 'Show', @person %> |
-<%= link_to 'Back', people_path %>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-10">
+	<%= link_to  @person , class: 'btn btn-primary' do%>
+		<i class='fa fa-ban'></i> Cancel
+	<% end %>
+	</div>
+</div>
 </div>

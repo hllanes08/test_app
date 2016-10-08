@@ -1,12 +1,17 @@
 <div class="container jumbotron">
-<p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p>
+    <div class="col-md-6 col-md-offset-10">     
+ 	<%= link_to new_person_path, class: 'btn btn-primary' do %>
+		<i class="fa fa-plus"></i> Add Person
+	<% end %>
+    </div>
 
 <table class="table table-striped tale-hover">
   <thead>
     <tr>
       <th>First name & Last name</th>
       <th>Email</th>
-      <th>Birthdate</th>
+      <th>Age</th>
       <th colspan="1"></th>
     </tr>
   </thead>
@@ -16,8 +21,8 @@
       <tr>
 	 <td><%= link_to "#{person.first_name} #{person.last_name}", person %></td>
         <td><%= person.email %></td>
-        <td><%= person.birthdate %></td>
-	<td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=  (Time.now.year - person.birthdate.year) %></td>
+	<td><%= link_to  person, method: :delete, data: { confirm: 'Are you sure?'} do %><i class="fa fa-trash-o"></i><% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,5 +30,5 @@
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+
 </div>
