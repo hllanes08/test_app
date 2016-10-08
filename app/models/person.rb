@@ -11,6 +11,7 @@
 #
 class Person < ActiveRecord::Base
    self.table_name = "people"
+   enum gender: [:male , :female ]
    validates_length_of :first_name, maximum: 75
    validates_length_of :last_name, maximum: 75
    validates_length_of :job, maximum: 75

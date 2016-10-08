@@ -27,14 +27,14 @@
    <div class="col-md-6">
   <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email,class: 'form-control' %>
+    <%= f.text_field :email, class:'form-control' %>
   </div>
    </div>
-   <div class="col-md-6">
-    <div class="form-group">
-    <%= f.label :gender %><br>
-    <%= f.check_box :gender, class: 'form-control' %>
-    </div>
+  <div class="col-md-6">
+     <div class="form-group">
+     	<%= f.label :birthdate %><br>
+     	<%= f.text_field :birthdate, 'data-provide': 'datepicker', class: 'form-control' %>
+     </div>
    </div>
   </div>
   <div class="row">
@@ -45,12 +45,11 @@
 	</div>
    </div>
    <div class="col-md-6">
-   <div class="form-group">
-    <%= f.label :job %><br>
-    <%= f.text_field :job, class: 'form-control' %>
+    <div class="form-group">
+    <%= f.label :gender %><br>
+    <%= f.select :gender, [['Male','male'], ['Female', 'female']],{},{class: 'form-control'} %>
+    </div>
    </div>
-   </div>
-
   </div>
   <div class="row"> 
    <div class="col-md-6">
@@ -59,13 +58,16 @@
     <%= f.text_area :bio, class: 'form-control' %>
   </div>
    </div>
+   <div class="col-md-6">
+   <div class="form-group">
+    <%= f.label :job %><br>
+    <%= f.text_field :job, class: 'form-control' %>
+   </div>
+   </div>
+
+
   </div>
-  
-  <div class="form-group">
-    <%= f.label :birthdate %><br>
-    <%= f.date_select :birthdate %>
-  </div>
-  
+   
   <div class="actions row">
       <div class="col-md-6 col-md-offset-9">
 	      <%= f.submit 'Save', class: 'btn btn-primary col-md-2' %>
