@@ -19,7 +19,7 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
-	 <td><%= link_to "#{person.first_name} #{person.last_name}", person %></td>
+	 <td><%= link_to "#{person.first_name} #{person.last_name}", person%></td>
         <td><%= person.email %></td>
         <td><%=  (Time.now.year - person.birthdate.year) %></td>
 	<td><%= link_to  person, method: :delete, data: { confirm: 'Are you sure?'} do %><i class="fa fa-trash-o"></i><% end %></td>

@@ -1,5 +1,5 @@
 ##
-# Public: People class for manage any action over people table
+# Public: Person class for manage any action over people table
 # firts_name :string  max 75 characters
 # last_name  :string  max 75 characters
 # email	     :string   valdate presence, uniq and valid email
@@ -10,6 +10,7 @@
 # picture    :string	url of picture
 #
 class Person < ActiveRecord::Base
+   self.table_name = "people"
    validates_length_of :first_name, maximum: 75
    validates_length_of :last_name, maximum: 75
    validates_length_of :job, maximum: 75

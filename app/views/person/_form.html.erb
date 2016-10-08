@@ -71,7 +71,7 @@
       <div class="col-md-6 col-md-offset-9">
 	      <%= f.submit 'Save', class: 'btn btn-primary col-md-2' %>
 	      <% if !@person.id.nil? %> 
-	      	<%= link_to  @person , class: 'btn btn-primary col-md-2 col-md-offset-1' do%>     
+	      	<%= link_to person_path,class: 'btn btn-primary col-md-2 col-md-offset-1' do%>     
 	 	      <i class='fa fa-ban'></i> Cancel
 	      	<% end %> 
 	    <% end %>
