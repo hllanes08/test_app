@@ -1,15 +1,14 @@
-<%= form_for(@person) do |f| %>
-  <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
-
-      <ul>
+<%= form_for(@person, url: {action: @action}) do |f| %>
+    <% if @person.errors.any? %>
+      <div class="row">
       <% @person.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	  <div class="alert alert-dismissible alert-success">
+	      <button type="button" class="close" data-dismiss="alert">x</button>
+	      <strong><%= message %></strong>
+         </div>
+	<% end %>
+      </div>
+    <% end %>
   <div class="row">
   <div class="col-lg-6">
   <div class="form-group">
