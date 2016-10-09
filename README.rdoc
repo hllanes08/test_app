@@ -6,26 +6,26 @@ members receive an email  notifications. You can list all members.
 
 ==Requirements:
 
-	 MySql 5.7.15
-	 Redis Server 
+	 * MySql 5.7.15
+	 * Redis Server 
 
 ==Install
 
-   1. Install ruby 2.2.0, preferred use rvm
-   2. Run
-	 bundle install
-   3. Setup your root password for mysql on database.yml
-         rake db:setup
-	 rake assets:precompile
-	 rails s
+1. Install ruby 2.2.0, preferred use rvm
+2. Run
+    bundle install
+3. Setup your root password for mysql on database.yml
+    rake db:setup
+    rake assets:precompile
+    rails s
    
-   4. Run workers
-	QUEUE=* rake environment resque:work --trace
+4. Run workers
+    QUEUE=* rake environment resque:work --trace
   
-   5. Run scheduler and go to localhost:568
-	resque-web
-   6. Run mailcatcher for get emails and go to localhost:1080
-	mailcatcher
+5. Run scheduler and go to localhost:568
+    resque-web
+6. Run mailcatcher for get emails and go to localhost:1080
+    mailcatcher
    
 
 	
