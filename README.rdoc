@@ -1,17 +1,15 @@
-== README
-
 App for manage people, you can add, delete or edit profiles or people. When a new person is added all
 members receive an email  notifications. You can list all members.
 
-Delivered
+==Delivered
 	09 Oct 2016
 
-Requirements:
+==Requirements:
 
 	 MySql 5.7.15
 	 Redis Server 
 
-Install
+==Install
 
    1. Install ruby 2.2.0, preferred use rvm
    2. Run
