@@ -4,8 +4,8 @@ class UserMailer < ApplicationMailer
     def created_person(person, last_person)
 	 @person = person
 	 @last_person = last_person
-	 mail(
-	 to:person.email,
+	 p mail(
+	 to: person.email,
 	 subject: 'People App - New person added') 
     end
 end
