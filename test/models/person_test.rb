@@ -57,5 +57,9 @@ test "birthdate should exist" do
     @person.valid?
     assert_includes(@person.errors[:birthdate], "can't be blank")
  end
-
+test "birthdate should not be after today" do
+    @person.birthdate = "10/10/2016"
+    @person.valid?
+    assert_includes(@person.errors[:birthdate], "can't be after today")
+ end
 end
