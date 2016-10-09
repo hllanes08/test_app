@@ -17,10 +17,17 @@ class Person < ActiveRecord::Base
    validates_length_of :job, maximum: 75
    validates_length_of :email, maximum: 254
 
-   validates_presence_of :first_name   
+   validates_presence_of :first_name
    validates_presence_of :last_name  
    validates_presence_of :email
    validates_presence_of :birthdate
    validates_uniqueness_of :email
    validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+   validate :before_today
+
+   def before_today
+       if !self.birthdate.nil? && self.birthdate.future?
+	    errors.add(:birthdate, "can't be after today")
+       end
+   end
 end

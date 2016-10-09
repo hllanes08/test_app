@@ -22,5 +22,6 @@ module TestApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     #config.active_record.raise_in_transactinal_callbacks = true 
+    config.web_console.development_only = false
   end
 end
