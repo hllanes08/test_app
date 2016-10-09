@@ -31,6 +31,7 @@ gem 'ffaker'
 gem 'resque'
 gem 'resque-scheduler'
 gem 'redis-rails'
+gem 'mailcatcher'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
