@@ -48,5 +48,14 @@ class PersonTest < ActiveSupport::TestCase
     assert_includes(@person.errors[:email],"is too long (maximum is 254 characters)")
  end
 
+ test "job should be minimum 75 characters" do
+    @person.job ="Loren ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequati" 
+    @person.valid?
+    assert_includes(@person.errors[:job], "is too long (maximum is 75 characters)")
+ end
+test "birthdate should exist" do
+    @person.valid?
+    assert_includes(@person.errors[:birthdate], "can't be blank")
+ end
 
 end
