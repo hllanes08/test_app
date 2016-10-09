@@ -26,6 +26,8 @@ members receive an email  notifications. You can list all members.
     resque-web
 6. Run mailcatcher for get emails and go to localhost:1080
     mailcatcher
+7. Run tests
+    rake test
    
 
 	
