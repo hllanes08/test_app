@@ -29,6 +29,7 @@ gem 'tomdoc', '~> 0.2.5'
 gem 'bootstrap-datepicker-rails'
 gem 'ffaker'
 gem 'resque'
+gem 'resque-scheduler'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
