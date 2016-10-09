@@ -58,7 +58,9 @@ class PersonController < ApplicationController
   # DELETE /person/1
   # DELETE /person/1.json
   def destroy
+    drop_person = "#{@person.first_name} #{@person.last_name}"
     @person.destroy
+    DropSenderJob.perform_later(drop_person)
     respond_to do |format|
       format.html { redirect_to person_index_path, notice: 'Person was successfully destroyed.' }
       format.json { head :no_content }
