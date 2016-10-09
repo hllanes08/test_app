@@ -15,7 +15,7 @@ class Person < ActiveRecord::Base
    validates_length_of :first_name, maximum: 75
    validates_length_of :last_name, maximum: 75
    validates_length_of :job, maximum: 75
-   validates_length_of :last_name, maximum: 254
+   validates_length_of :email, maximum: 254
 
    validates_presence_of :first_name   
    validates_presence_of :last_name  
