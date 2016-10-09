@@ -53,3 +53,4 @@ group :development, :test do
   gem 'factory_girl'
 end
 
+ruby "2.2.0"
