@@ -3,7 +3,7 @@ members receive an email  notifications. You can list all members.
 
 ==Delivered 
 	 09 Oct 2016
-	  https://peopletestapp.herokuapp.com/
+	  https://peopletestapp.herokuapp.com
 	
 ==Requirements:
 
@@ -23,7 +23,7 @@ members receive an email  notifications. You can list all members.
 4. Run workers
     QUEUE=* rake environment resque:work --trace
   
-5. Run scheduler and go to localhost:568
+5. Run scheduler and go to localhost:5678
     resque-web
 6. Run mailcatcher for get emails and go to localhost:1080
     mailcatcher
