@@ -1,9 +1,10 @@
 App for manage people, you can add, delete or edit profiles or people. When a new person is added all
 members receive an email  notifications. You can list all members.
 
-==Delivered
-	09 Oct 2016
-
+==Delivered 
+	 09 Oct 2016
+	  https://peopletestapp.herokuapp.com/
+	
 ==Requirements:
 
 	 * MySql 5.7.15
