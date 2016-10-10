@@ -21,6 +21,7 @@ members receive an email  notifications. You can list all members.
     rails s
    
 4. Run workers
+    redis-server
     QUEUE=* rake environment resque:work --trace
   
 5. Run scheduler and go to localhost:5678
